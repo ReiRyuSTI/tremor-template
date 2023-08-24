@@ -4,6 +4,8 @@ import { BarChartComponent } from './components/BarChart';
 import { BarListComponent } from './components/BarList';
 import { DonutChartComponent } from './components/DonutChart';
 import { LineCartComponent } from './components/LineChart';
+import { ProgressBarComponent } from './components/ProgressBar';
+import { TrackerComponent } from './components/Tracker';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <AreaChartComponent />
           <DonutChartComponent />
           <BarListComponent />
+          <ProgressBarComponent />
+          <TrackerComponent />
         </Flex>
       </main>
     </>
