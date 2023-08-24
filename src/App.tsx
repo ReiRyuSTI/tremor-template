@@ -1,35 +1,22 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-
-import { Card, Text } from '@tremor/react';
+import { Flex } from '@tremor/react';
+import { AreaChartComponent } from './components/AreaChart';
+import { BarChartComponent } from './components/BarChart';
+import { BarListComponent } from './components/BarList';
+import { DonutChartComponent } from './components/DonutChart';
+import { LineCartComponent } from './components/LineChart';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="flex flex-col">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <Card>
-        <Text>text</Text>
-      </Card>
-      <p>Click on the Vite and React logos to learn more</p>
+      <main className="my-10 flex w-full justify-center gap-10">
+        <Flex className="flex max-w-2xl flex-col gap-5">
+          <LineCartComponent />
+          <BarChartComponent />
+          <AreaChartComponent />
+          <DonutChartComponent />
+          <BarListComponent />
+        </Flex>
+      </main>
     </>
   );
 }
